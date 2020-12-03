@@ -1,0 +1,22 @@
+{
+    "workbench.sideBar.location": "left",
+    "C_Cpp.updateChannel": "Insiders",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.default.cStandard": "c11",
+    "http.proxySupport": "off",
+    "files.associations": {
+        "*.c": "c",
+        "limits": "c",
+        "*.tcc": "c",
+        "type_traits": "c",
+        "stdio.h": "c"
+    },
+    "files.autoSave": "afterDelay",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    
+}

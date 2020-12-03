@@ -1,0 +1,14 @@
+<!--pages/index/index.wxml-->
+<view class="indexContainer">
+  <image wx:if="{{UserInfo.avatarUrl}}" class="userimage" src="{{UserInfo.avatarUrl}}"></image>
+  <button wx:else bindgetuserinfo="handgetuserinfo" open-type="getUserInfo">获取用户信息</button>
+  <text class="username">{{UserInfo.nickName}}</text>
+  <!-- 测试（非）冒泡事件
+    <view class="container" catchtap="handparent">
+    <text catchtap="handchild">{{msg}}</text>
+  </view> -->
+  <view class="container" catchtap="toLogs">
+    
+    <text>{{msg}}</text>
+  </view>
+</view>

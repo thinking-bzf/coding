@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h3>源数据下载</h3>
+{% endblock header %}
+
+{% block content %}
+<table class="table table-hover table-bordered table-condensed" align="center" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>文件名</th>
+            <th>上传日期</th>
+            <th>状态</th>
+            <th colspan="2">操作</th>
+            <th colspan="2">下载</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for date,Files in files.items %}
+        <tr>
+            <th>{{date}}分省汇总</th>
+            <th>{{date}}</th>
+            {% if Files.1 == 1 %}
+            <th>{{Files.3}}</th>
+            {% else %}
+            <th>请先完成分省清洗</th>
+            {% endif %}
+            <th><a href="{% url 'data_deal:TodayClean' date %}">分省汇总</a></th>
+            <th><a href="{% url 'data_deal:TodayMerge' date %}">当日总表拼接</a></th>
+            {% if Files.3 == '当日清洗完成' %}
+            <th colspan="2"><a href="{% url 'data_deal:TodayClean_DL' date  %}">当日拼接下载</a></th>
+            {% else %}
+            <th colspan="2">请先汇总数据</th>
+            {% endif %}
+        </tr>
+        {% for file in Files.0 %}
+        {% if file.clean_message == '当日总表拼接完成' %}
+        <tr class="success">
+            <td>{{file}}</td>
+            <td>{{file.date_added|date:'H:i'}}</td>
+            <td>{{file.clean_message}}</td>
+            <td colspan="2"><a
+                    href="{% url 'data_deal:DataClean' file.date_added|date:'Y' file.date_added|date:'md' file file.id %}">数据清洗</a>
+            </td>
+            <td>
+                <a
+                    href="{% url 'data_deal:original_dl' file.date_added|date:'Y' file.date_added|date:'md' file %}">下载源文件</a>
+            </td>
+            <td><a
+                    href="{% url 'data_deal:Data_CleanDL' file.date_added|date:'Y' file.date_added|date:'md' file s %}">清洗结果下载</a>
+            </td>
+        </tr>
+        {% elif file.clean_message == '数据未清洗' %}
+        <tr class="info">
+            <td>{{file}}</td>
+            <td>{{file.date_added|date:'H:i'}}</td>
+            <td>{{file.clean_message}}</td>
+            <td colspan="2"><a
+                    href="{% url 'data_deal:DataClean' file.date_added|date:'Y' file.date_added|date:'md' file file.id %}">数据清洗</a>
+            </td>
+            <td>
+                <a
+                    href="{% url 'data_deal:original_dl' file.date_added|date:'Y' file.date_added|date:'md' file %}">下载源文件</a>
+            </td>
+            <td>请先清洗数据</td>
+        </tr>
+        {% elif file.clean_message == '清洗错误,请正确上传源文件' %}
+        <tr class="danger">
+            <td>{{file}}</td>
+            <td>{{file.date_added|date:'H:i'}}</td>
+            <td>{{file.clean_message}}</td>
+            <td colspan="2"><a
+                    href="{% url 'data_deal:DataClean' file.date_added|date:'Y' file.date_added|date:'md' file file.id %}">数据清洗</a>
+            </td>
+            <td>
+                <a
+                    href="{% url 'data_deal:original_dl' file.date_added|date:'Y' file.date_added|date:'md' file %}">下载源文件</a>
+            </td>
+            <td>请上传正确文件</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

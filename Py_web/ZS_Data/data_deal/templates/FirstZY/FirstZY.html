@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+
+{% block header %}
+<h3>志愿优先级计算</h3>
+{% endblock header %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button name="submit" class="btn btn-primary">Upload</button>
+    {% endbuttons %}
+    {% if messages == '数据处理成功' %}
+    <div class="alert alert-success" role="alert">{{messages}}</div>
+    <a class="btn btn-default" href="{% url 'data_deal:FirstZY_dl' file_name %}">本次结果文件下载</a>
+    {% endif %}
+</form>
+<h4>历史计算结果下载</h4>
+<table class="table table-hover table-bordered table-condensed" align="center" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>文件名</th>
+            <th>上传时间</th>
+            <th>操作</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        {% for file in Files %}
+        <tr>
+            <td>{{file}}</td>
+            <td>{{file.date_added|date:'M d, Y H:i'}}</td>
+            <td><a href="{% url 'data_deal:FirstZY_dl' file %}">下载</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

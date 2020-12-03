@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>录取数据在线编辑</title>
+        <link rel="stylesheet" href="/File/static/bootstrap/css/bootstrap.min.css">
+        <script src="/File/static/jquery.js"></script>
+        <script src="/File/static/bootstrap/js/bootstrap.min.js"></script>
+        <style>
+            .navbar-brand {
+                padding-top: 0;
+            }
+
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: center;
+                
+            }
+            .todaytotal{
+                 border-top:1px solid black; 
+                 border-bottom:1px solid black ;
+            }
+            .table-hover > tbody > tr.success:hover > th{
+                background-color: #dff0d8;
+            }
+
+        </style>
+        <link rel="shortcut icon" href="/File/static/image/favicon.ico">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="D:/Codeing/vsc_html/自建网站/时钟.html">
+                        <img alt="Brand" src="/File/static/image/yibu.jpg">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'FirstZY:index' %}">首页</a></li>
+                        <li><a href="#">查询系统</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">数据处理<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'data_deal:FirstZY' %}">报考志愿指数计算</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'data_deal:original' %}">源数据上传</a></li>
+                                <li><a href="{% url 'data_deal:original_index' %}">源数据下载</a></li>
+                                <li><a href="{% url 'data_deal:OriginalMerge_index' %}">总表拼接</a></li>
+                                <li><a href="#">挂网数据</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">当年录取汇总</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                        <li><a>Hallo,{{ user.username }}.</a></li>
+                        <li><a href="{% url 'users:logout' %}">log out</a></li>
+                        {% else %}
+                        <li><a href="{% url 'users:login' %}">用户登录</a></li>
+                        {% endif %}
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container">
+            <div class="page-header">
+                {% block header %}{% endblock header %}
+            </div>
+            <div>
+                {% block content %}{% endblock content %}
+                <!-- 在content中填充子模版的content -->
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block header %}
+<h3>源数据上传</h3>
+{% endblock header %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button name="submit" class="btn btn-primary">Upload</button>
+    {% endbuttons %}
+    {% if messages == '数据上传成功' %}
+    <div class="alert alert-success" role="alert">{{messages}}</div>
+    {% endif %}
+</form>
+{% endblock content %}
