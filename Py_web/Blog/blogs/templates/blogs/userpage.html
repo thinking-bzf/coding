@@ -1,0 +1,34 @@
+{% extends 'blogs/base.html' %}
+
+{% block header %}
+<h2>{{owner}}</h2>
+{% endblock header %}
+
+{% block content %}
+
+<ul>
+    {% for blog in Blogs %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>
+                <p>{{ blog.title }}</p>
+                <small>
+                    <p>{{ blog.date_added }}</p>
+
+                </small>
+            </h3>
+
+        </div>
+        <div class="panel-body">
+            {{ blog.text|linebreaks }}
+        </div>
+    </div>
+    {% empty %}
+
+    There is no blog
+
+    {% endfor %}
+</ul>
+
+
+{% endblock content %}

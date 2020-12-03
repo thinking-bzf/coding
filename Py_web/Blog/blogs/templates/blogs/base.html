@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/jquery.js"></script>
+        <title>Blog-Recording your life</title>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container-fluid">
+
+                <div class="navbar-haeder">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="{% url 'blogs:index' %}" class="navbar-brand">
+                        Blog
+                    </a>
+                </div>
+
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        {% if user.is_authenticated %}
+                        <li><a>Hallo,{{ user.username }}.</a></li>
+                        {% else %}
+                        <li><a>Record your life</a></li>
+                        {% endif %}
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'blogs:personal' user.id %}">Your blogs</a></li>
+                        <li><a href="{% url 'users:logout' %}">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'users:login' %}">Login</a></li>
+                        <li><a href="{% url 'users:register' %}">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-header">
+                {% block header %}{% endblock header %}
+            </div>
+            <div>
+                {% block content %}{% endblock content %}
+                <!-- 在content中填充子模版的content -->
+            </div>
+        </div>
+    </body>
+
+</html>
