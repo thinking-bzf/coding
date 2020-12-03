@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap {
+                width: 500px;
+                /* height: 200px; */
+                border: 1px solid #000;
+                /* float:left; */
+                margin: 200px auto;
+                /* display: inline-block; */
+                /* overflow: hidden; */
+            }
+
+            .left {
+                height: 200px;
+                width: 200px;
+                background: pink;
+                float: left;
+            }
+
+            /* .div1{
+                clear: both;
+            } */
+            .clear::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            /* .clear{
+                zoom: 1;
+            } */ 
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap clear">
+            <div class="left">这是一个左边的div</div>
+            <!-- <div class="div1"></div> -->
+        </div>
+        <!--
+            子级设置浮动之后，层级不一样,子级脱离文档流，不会撑开父级高度大小
+            方法：
+                1.需要手动加高度 扩展性不好
+                2.将父级设置浮动 页面中所有的元素都需要加浮动，margin左右自动居中自适应会失效
+                3.inline-block清浮动  margin左右auto会失效
+                4.空标签清浮动   IE最小高度19px，而且会出现很多空标签
+                5.br清浮动       不符合工作中：结构，样式，行为三者分离的要求。
+                6.overflow:hidden;  需要配合宽度或者zoom 兼容IE6，IE7
+                7.after伪类(主流)
+                    .clear::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    after伪类：元素内部末尾添加内容
+                                :after{content"添加的内容";} IE7,7下不兼容
+
+                    .clear{
+                        zoom:1;
+                    }
+                    zoom缩放
+                            a.触发IE下haslayout,是元素根据自身内容机酸高宽
+                            b.火狐不支持
+
+        -->
+
+    </body>
+
+</html>

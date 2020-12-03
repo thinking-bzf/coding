@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>bzf</title>
+        <style>
+            div {
+                border: 1px solid red;
+            }
+
+            span {
+                background: red;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!--
+            块标签
+                1.默认独占一行，继承父级的宽度，没有宽度时，默认塞满一行
+                2.换行不会被解析，指源代码中
+                3.支持所有css命令
+                div,p,h1-h6 ,ul,li,ol,dl,dt,dd,form,table,html5新增标签
+        -->
+        <div>这是一个div</div>
+        <div></div>
+        <!--
+            内嵌标签
+                1.同排可以继续用同类的标签
+                2.内容撑开高度
+                3.不支持宽高设置
+                4.不支持上下的margin
+                5.代码换行被解析(显示为空格)
+            span,a,em,strong,i,label
+            
+        -->
+
+        <span>区分样式标签</span>
+        <span>区分样式</span>
+        <!--
+            内联块标签
+                1.和其他元素在同一行显示
+                2.支持宽高设置
+                3.换行会被解析
+            img input select 
+        -->
+        <img src="1.jpg" alt="图片">
+    </body>
+
+</html>

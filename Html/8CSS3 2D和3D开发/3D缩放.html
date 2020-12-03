@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap {
+                width: 800px;
+                height: 800px;
+                border: 1px solid #000;
+                transform-style: preserve-3d;
+                perspective: 800px;
+            }
+
+            .div1 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 400px auto;
+                transition: 1s;
+            }
+
+            .div1:hover {
+                transform: scaleX(5) translateZ(100px);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="div1"></div>
+        </div>
+        <!-- 
+            单独写scaleZ(5)是没有效果的 和translateZ(100px)配合起来用会实现效果 
+                往屏幕外走了5*100像素 相当于将位移效果放大了5倍
+            transform3d(x,y,z) 参数为负数时 先翻转再缩放
+            
+         -->
+    </body>
+
+</html>

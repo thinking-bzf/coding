@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div:nth-child(4) {
+                background: red;
+            }
+
+            /* div:nth-of-type(3) {
+                background: blue;
+            } */
+            /* div:empty {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #000;
+            } */
+
+            div:only-child {
+                width: 100px;
+                height: 100px;
+                background: red;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>第一个div</div>
+        <p>第一个p
+        </p>
+        <h1></h1>
+        <div>第二个div</div>
+        <span>SPAN</span>
+        <div>第三个div</div>
+        <p>第二个p</p>
+        <div>11</div>11
+        <!-- 
+            E:nth-child(x) 在所有子元素第x个元素如果是E类元素时触发样式
+                x=odd 表示匹配奇数行
+                x=even 表示匹配偶数行
+                x=kn 表示匹配k倍数
+            E:nth-last-child(x) 从后面开始计算
+            E:nth-of-type(x) 在同父级下 所有E类型的标签的第x个元素触发样式
+            E:nth-last-of-type(x) 从后面开始计算
+            E:empty 表示E元素中没有子节点 子节点包括文本节点
+            E:first-child 第一个子节点
+            E:last-child 最后一个子节点
+            E:first-of-type 第一个E子节点
+            E:last-of-type 最后一个E子节点
+            E:only-child 某个父级下 有且只有一个div
+            E:only-of-type 某父级下 有且只能有一个div 但是能有其他元素 子节点不包括文本节点
+            E:not(.textinput) 表示所有class不是"textinput"的节点
+         -->
+    </body>
+
+</html>

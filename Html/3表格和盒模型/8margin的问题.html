@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            #div1 {
+                width: 280px;
+                height: 300px;
+                /* border: 1px solid red; */
+                background: pink;
+
+            }
+
+            #div2 {
+                width: 50px;
+                height: 50px;
+                background: red;
+                margin-top: 20px;
+
+            }
+
+            .list {
+                width: 200px;
+                height: 200px;
+                border: 1px solid red;
+            }
+
+            .list li {
+                width: 50px;
+                height: 50px;
+                background: red;
+                list-style: none;
+                float: left;
+            }
+            #item1{
+                /* margin-bottom: 20px; */
+                margin-right:10px ;
+            }
+            #item2{
+                /* margin-top: 30px; */
+                margin-left: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <ul class="list">
+                <li id="item1"></li>
+                <li id="item2"></li>
+            </ul>
+        </div>
+        <!--
+            margin-top传递：
+                在包含关系中 如果在子级设置了margin-top
+                这个值会传递给父级
+            解决方式：
+                1.给父级设置边框
+                2.这个间隙可以由padding设置
+
+            margin的合并
+                在同级元素中，如果上下元素的间隙由margin带来
+                间隙由大值决定
+                水平则不存在合并这个问题
+            margin是可以接受负值的
+                1.去除列表右边框
+            
+        -->
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+    </body>
+
+</html>

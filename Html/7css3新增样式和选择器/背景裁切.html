@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                border: 10px solid rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                background: url(img/2.PNG) no-repeat;
+                background-clip: content-box;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div></div>
+        <!-- 
+            background-clip: border-box|padding-box|content-box|no-clip
+                    border-box 在border区域也显示
+                    pandding-box 显示在padding区域内包括padding(被裁剪)
+                    content-box 显示在内容区域内不包含padding
+                分别表示 从边框 内填充 内容区域向外裁剪背景 no-clip表示不裁切和border-box显示同样的效果
+                默认值 border-box
+         -->
+    </body>
+
+</html>

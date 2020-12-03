@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap {
+                width: 500px;
+                height: 500px;
+                border: 1px solid #000;
+            }
+
+            /* .wrap div,
+            a {
+                float: left;
+                float: right;
+            } */
+
+            .left {
+                height: 200px;
+                width: 200px;
+                background: pink;
+                float: left;
+            }
+
+            .right {
+                width: 400px;
+                height: 200px;
+                background: red;
+                clear: left;
+                /* 让左边没有浮动元素 */
+                clear: both;
+                /* 让两侧都没有浮动元素 */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="left">这是左边的</div>
+            <div class="right">这是右边的</div>
+        </div>
+        <!--
+            clear 清除浮动使用起来有限制：
+            1.只能消除元素元素本身的左测或右侧没有浮动元素问题
+            2.该条样式只对块元素有效
+        -->
+    </body>
+
+</html>

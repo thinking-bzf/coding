@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .div1 {
+                width: 200px;
+                height: 200px;
+                background: greenyellow;
+                /* animation: move 2s linear infinite  alternate; */
+                animation: move 2s linear forwards;
+                border: 1px solid #000;
+                position: absolute;
+                left: 50px;
+                top: 50px;
+            }
+
+            @keyframes move {
+                /* from {
+                    width: 300px;
+                }
+
+                to {
+                    width: 500px;
+                } */
+                25%{
+                    left: 100px;
+                    top: 100px;
+                    background: pink;
+                }
+                65%{
+                    left: 200px;
+                    top: 200px;
+                    background:red;
+                }
+                100%{
+                    left:300px;
+                    top: 300px;
+                    background: pink;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="div1"></div>
+        <!-- 
+            动画帧 定义动画的每一次的运动
+            @keyframes 关键帧
+            {
+                0%
+                50% 如果不设置100% 则会发生往返的效果
+                100%
+            }
+            1.定义运动动画轨迹
+            2.过程绑定元素身上
+                animation
+                    animation-name 动画名称(关键帧名称)
+                    animation-duration 动画持续时间
+                    animation-delay 动画延迟
+                    animation-iteration-cound 重复次数 infinite为无限次
+                    animation-direction 应该轮流方向播放动画 
+                        alternate 第一次动画结束后 从停止的位置倒放
+                        normal 动画第二次直接跳到0%的状态开始执行
+            3.运动速度 linear ease in ease-in-out
+            4.运动默认是一次 可意识具体的数值 表示运动的次数
+                也可以是infinite  无限次的运动下去
+            5.alternate 封偶次运动
+            6forwards 让物体停留在目标点
+
+         -->
+    </body>
+
+</html>

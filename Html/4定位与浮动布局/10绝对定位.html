@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap {
+                width: 500px;
+                height: 500px;
+                border: 1px solid #000;
+                position: relative;
+                background: red;
+                margin: 100px;
+            }
+
+            .left {
+                height: 200px;
+                width: 200px;
+                background: pink;
+                margin-top: 20px;
+                float: left;
+                position: absolute;
+
+                left: 20px;
+                top: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="left">这是一个左边的div</div>
+            <!-- <div class="right">右侧div</div> -->
+        </div>
+        <!--
+            绝对定位的参照物是1：离他最近的2：有定位属性的3：父级元素
+                若没有则以body为参照物
+            相对定位一般当作决定定位的父级
+            
+        -->
+    </body>
+
+</html>

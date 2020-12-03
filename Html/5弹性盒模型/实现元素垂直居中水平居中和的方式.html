@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+
+            }
+
+            #box {
+                width: 400px;
+                height: 400px;
+                border: 1px solid #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #box p {
+                width: 100px;
+                height: 100px;
+                background: red;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="box">
+            <p>文字</p>
+        </div>
+        <!-- 
+            1 table
+                #box {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #000;
+                    display: table;
+                }
+
+                #box p {
+                    width: 100px;
+                    height: 10px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+            2 定位
+                #box {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #000;
+                    position: relative; 
+                }
+
+                #box p {
+                    width: 100px;
+                    height: 100px;
+                    background: red;
+                    position: absolute;
+                    left: 50%;  //上左分别偏移50% 左上角顶点为基准
+                    top: 50%;
+                    或left: calc(50% - 50px);
+                      top: calc(50% - 50px);  则下两行不用写
+                    margin-left: -50px;
+                    margin-top: -50px;
+                }
+            3 margin: auto;
+                #box {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #000;
+                    position: relative;
+                }
+
+                #box p {
+                    width: 100px;
+                    height: 100px;
+                    background: red;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;//平均分配四周的margin使其居中
+                }
+            
+            4 弹性盒模型
+                #box {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+                #box p {
+                    width: 100px;
+                    height: 100px;
+                    background: red;
+                }
+         -->
+    </body>
+
+</html>

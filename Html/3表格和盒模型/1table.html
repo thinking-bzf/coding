@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                width: 400px;
+                /* border-collapse: collapse; */
+
+            }
+
+            td,
+            th {
+                height: 40px;
+                /* padding: 0; */
+                font-size: 18px;
+                font-weight: normal;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            /* <table border="1" cellspacing="10" cellpadding="10">
+                border="1" 
+                给每个表格的每个格子，以及边框加上1像素的边框
+
+                cellspacing="0"
+                指定每个单元格间隙 间隙会消除 边框会叠加
+                
+                cellpadding
+                指定单元格内容与边界的空白距离   写在属性中会出现td的原来的padding没有没清除，所以一般写在css属性表中。
+            */
+            /* border-collapse: collapse;单元格间隙的合并 */
+            /* th,td{padding:0;} 重置单元格默认填充 */
+            /* font-size: 18px; font-weight: normal; 重置字体 */
+            /* vertical-align: middle; 图片在表格中居中对齐 /top/bottom  */
+
+        </style>
+    </head>
+
+    <body>
+        <table border="1" cellspacing="0" cellpadding="0">
+            <caption>表格标题放在table中居中显示</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                    <th>星期四</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>111</td>
+                    <td rowspan="2">222</td>
+                    <td>333</td>
+                    <td>444</td>
+                    <td>555</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/2.PNG">
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td> 纵跨两行后的删除某一个单元格-->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </body>
+
+</html>

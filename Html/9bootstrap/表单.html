@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- <input type="text"/> -->
+        <!-- 1 垂直表单
+        form-control 将表单元素按照块元素的方式显示
+        form-group 获得最佳间距 
+        搭配label sr-only使用
+         -->
+        <div class="container">
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    <label for="text1" class="sr-only">用户名</label>
+                    <input type="text" class="form-control" id="text1">
+                </div>
+
+
+            </div>
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    <label for="text2">密码</label>
+                    <input type="text" class="form-control" id="text2">
+                </div>
+            </div>
+        </div>
+        <!-- 
+            内联表单 至少在 768px 宽度适用 不然按照默认的垂直表单显示
+         -->
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+            <button type="submit" class="btn btn-default">Send invitation</button>
+        </form>
+        <!-- 
+            水评排列表单 解决了垂直表单的label位置不在一行问题
+         -->
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </body>
+
+</html>

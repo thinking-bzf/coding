@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #box {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                /* padding-top: 10px;
+                padding-left: 20px;
+                padding-bottom: 30px;
+                padding-right: 5px; */
+                padding: 10px 5px 30px 20px;
+            }
+            #wrap{
+                width: 300px;
+                height: 300px;
+                
+                border: 1px solid #000;
+            }
+            #div1{
+                width: 50px;
+                height: 50px;
+                background: red;
+                padding: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--
+                padding:1-4个值
+                单一padding
+                padding: 10px;              上下左右为10px
+                padding: 10px,20px;         上下为10px 左右为20px
+                padding:10px,20px,30px;     上10 左右20 下30
+                padding:10px,5px,30px,20px;   上10 右5 下30 左20
+                padding-top padding-right padding-left padding-bottom
+            盒模型：标准盒模型
+            content=width/height
+            padding:10px
+            border:4px
+            margin:0
+            元素可视区的范围:width=content+padding+border=202
+            元素可视区的范围:height=content+padding+border212
+            只要计入了padding样式 要从内容减去
+            padding 只影响盒子以内 
+        -->
+        <div id="box">这是div盒模型</div>
+        <div id="wrap">
+            <div id="div1"></div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1 {
+                width: 500px;
+                height: 500px;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                border: 1px solid #000;
+            }
+
+            #in {
+                width: 200px;
+                height: 200px;
+                background: red;
+                transition: 2s;
+                margin: 200px auto;
+            }
+
+            #div1 #in:hover {
+                /* transform: rotateY(75deg);
+                transform: rotateX(75deg);
+                transform: rotateZ(75deg); */
+                transform: rotate3d(1,1,1,75deg);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="div1">
+            <div id="in"></div>
+        </div>
+        <!-- 
+            transform-style: preserve-3d;
+            perspective设置在3D变换元素的父级 表示观察者在z轴的位置 一般800px为最佳
+                初始值 none 
+                应用于 非inline元素(包括block inline-block table table-cell等)
+                无继承性
+                不可为0或负值 不能为百分比(无参照物)
+            
+            分别按指定轴旋转一定角度
+                rotateY(deg)
+                rotateX(deg)
+                rotateZ(deg)
+            rotate3d(x,y,z,angle); xyz表示三轴的矢量值等同于下列写法
+                transform:rotateX(x*deg),rotateY(y*deg),rotateZ(<z></z>deg);
+            旋转基点
+                围绕y轴 left right center
+                围绕x轴 top botton center
+                围绕Z轴 top right bottom left
+         -->
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logintest.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  	<script type="text/javascript">
+  		function validate(){
+  			account = document.loginForm.account.value;
+  			password= document.loginForm.password.value;
+  			if(account==""){
+  				alert("账号不能为空！");
+  				document.loginForm.account.focus();
+  				return;
+  		}else if(password==""){
+  				alert("密码不能为空！");
+  				document.loginForm.account.focus();
+  				return;
+  		}
+  		document.loginForm.submit();
+  	}
+  	</script>
+  	登录：
+  	<form name="loginForm">
+  	账号：<input name="account" type="text"><br>
+  	密码：<input name="password" type="password"><br>
+  	<input type="button" onclick ="validate" value="登录">
+  	</form>
+  </body>
+</html>

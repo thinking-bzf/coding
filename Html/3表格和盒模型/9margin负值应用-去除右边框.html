@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body,
+            ul {
+                margin: 0;
+                padding: 0;
+
+            }
+            ul{
+                margin-right: -25px;
+            }
+            #test {
+                width: 350px;
+                height: 400px;
+                border: 1px solid #000;
+                margin: 200px auto;
+            }
+
+            #test li {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin-right: 25px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--
+            该格式下 
+            ul的margin-right 可以设置成负数，为文档流设置虚拟的空间，使list可以在一行显示
+            通过计算可以改变li的margin-right和ul的margin-right（两者相加=0） 使右边框的空白区域消失
+        -->
+
+        <div id="test">
+            <ul>
+                <li>子元素1</li>
+                <li>子元素2</li>
+                <li>子元素3</li>
+                <li>子元素4</li>
+                <li>子元素5</li>
+                <li>子元素6</li>
+            </ul>
+        </div>
+
+    </body>
+
+</html>

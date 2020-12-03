@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap{
+                width: 800px;
+                height: 800px;
+                border: 1px solid #000;
+                transform-style:preserve-3d;
+                perspective: 800px;
+            }
+            .div1{
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 100px auto;
+                transition: 2s;
+            }
+            .div1:hover{
+                /* transform: translateZ(100px); */
+                transform: translate3d(10px,30px,50px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="div1"></div>
+        </div>
+        <!-- 
+            translate3d规定每个方向的移动量 
+         -->
+    </body>
+
+</html>

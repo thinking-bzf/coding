@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* p {
+                text-shadow: 10px 20px 3px red;
+            } */
+            /* p{
+                text-overflow: ;
+            } */
+            p {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <p>这是一段话</p> -->
+        <div>
+            <p>8月15日，据@鞍山公安 发布案情通报：2020年8月9日
+                ，鞍山市岫岩县洋河镇马家堡村胡某某(女，60岁，岫岩县人)被杀害。
+                经查，死者丈夫王传来(男，57岁，岫岩县人)具有重大犯罪嫌疑并已潜逃。</p>
+        </div>
+
+        <!-- 
+            文字阴影
+                text-shadow: x y blur color
+                    参数
+                        x 横向偏移
+                        y 纵向偏移
+                        blur 模糊距离
+                        color 阴影颜色
+                    阴影叠加
+                        text-shadow:2px 2px 0px red,2px 2px 4px green;
+                        先渲染后面的 在渲染前面
+            文字描边
+                webkit-text-stroke:宽度 颜色
+            text-overflow 定义文本处理方式
+                clip 无省略号
+                ellipsis 省略号(注意配合overflow:hidden和white-space:nowrap一块使用)
+                overflow:hidden;表示超过父级隐藏
+                white-space:nowrap;表示不换行
+                text-over:ellipsis 表示将改行未显示的变成"..." 
+
+         -->
+    </body>
+
+</html>

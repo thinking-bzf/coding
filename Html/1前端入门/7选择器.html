@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>bzf</title>
+        <style>
+            /* 通用选择器 */
+            /* 
+             * {
+                background: red;
+            }
+            */
+            /* 类别选择器 
+            .div1 {
+                width: 100px;
+                height: 100px;
+                background: red;
+            } */
+            /* id选择器 
+            #div {
+                width: 100px;
+                height: 100px;
+                background: green;
+            } */
+            /*标签选择器
+            div {
+                width: 100px;
+                height: 100px;
+                border: 2px solid blue;
+            }
+            */
+            /* 后代选择器
+            ul li {
+                width: 100px;
+                height: 100px;
+                border: 2px solid blue;
+            } 
+            */
+            /* 子选择器
+            #oul>li{
+                width: 100px;
+                height: 100px;
+                border: 2px solid black;
+            }
+             */
+            /* 群组选择器
+            ul,p,div{
+
+            } */
+            /* 同胞相邻选择器
+            .div1+ul {
+                width: 100px;
+                height: 100px;
+                border: 2px solid black;
+            } 
+            */
+
+        </style>
+    </head>
+
+    <body>
+        <!--
+        选择器和优先级
+        1选择器:
+        通用选择器 *
+        类别选择器 （.class）               可以被多个元素重复使用
+        ID选择器（#id） #first              唯一性，指向为唯一元素
+        标签选择器 （element）              应用所有的标签
+        后代选择器(element element)         应用特别标签下的所有子标签包括孙元素
+        子选择器（element>element)          只能应用到子代元素 不能包括孙元素
+        群组选择器（element,element)        可以写多个样式，内部的写法可有多种
+        相邻同胞选择器（element+element)     div+p 选择紧接在<div>之后所有同胞<p>元素 
+        伪类选择器（:link:visited:active:hover) a:link a:visited a:active a:hover
+        a:link表示的是未访问的链接，a:visited表示已访问的链接 ，
+        a:hover表示鼠标移动到链接上，a:active表示的是选定的链接（当我们点击别松开鼠标，显示的状态）
+        -->
+        <div class="div1">这是一个div</div>
+        <div id="div">这是第二个div</div>
+        <p class="div1"></p>
+        <ul id="oul">
+            <li>
+                <ul>
+                    <li>这是第一个</li>
+                </ul>
+
+            </li>
+            <li>这是第二个</li>
+            <li>这是第三个</li>
+        </ul>
+    </body>
+
+</html>

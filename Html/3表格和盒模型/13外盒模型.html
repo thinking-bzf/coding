@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                background: red;
+                margin: 30px;
+                padding:10px;
+                border: 5px solid red;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--
+            标准盒模型
+            content/width:200
+            padding 20
+            border 10
+            margin 60
+
+            外盒模型
+            content/width 170（自动计算）外壳固定 内部区域自动减少增加
+            padding 20
+            border 10
+            可视区 200
+            box-sizing: border-box; 切换为外盒模型 
+                        content-box 默认标准盒模型
+        -->
+        <div></div>
+    </body>
+
+</html>

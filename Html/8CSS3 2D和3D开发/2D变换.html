@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #box {
+                width: 500px;
+                height: 500px;
+                border: 1px solid #000;
+            }
+
+            #box #in {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: 2s;
+                /* transform-origin: left top; */
+                /* transform-origin: 100px 200px; */
+                margin: 200px auto;
+
+            }
+
+            #box #in:hover {
+                /* transform:rotate(180deg); */
+                /* transform: skew(45deg, 45deg); */
+                /* transform:scale(-2); */
+                transform: translate(100px, 100px);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="box">
+            <div id="in"></div>
+        </div>
+        <!-- 
+            rotate() 旋转函数 取值度数 默认以物体中心点旋转 
+                可以设置关键字 表示物体的某个地方 top | left top
+                也可以设置像素点 100px 200px 在元素外
+                deg 度数
+            skew(x,y) 倾斜函数 取值度数
+                skewX()
+                skewY()
+            scale() 缩放函数取值整数，负数和小数 负数表示从1->负数 会先缩小后扩大
+                sclaeX()
+                scaleY()
+            tranlate() 位移函数 负数表示方向左
+                tranlateX()
+                tranlateY()
+            tranform-orgin 变换基点 
+                x轴 top bottom center 百分比
+                y轴 left right center 百分比
+                也可以是物体外的某个点
+         -->
+    </body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h2 {
+                width: 200px;
+                height: 200px;
+                /* background-color: RGB(166, 166, 166); */
+                background-image: url("img/2.png");
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                /* background-size: 100% 100%; */
+                /* background-size: 100px 100px; */
+                /* background-size: 100%; */
+                /* background-size: contain;*/
+                background-size: cover;
+                background-attachment: scroll;
+                /* background: red url("img/魔鬼桥.jpg") no-repeat  fixed;  */
+            }
+
+            /* body{
+                background-repeat: no-repeat;
+                height: 100px;
+                background-attachment: fixed;
+            } */
+
+            /*
+                颜色值
+                    英文单词
+                    16进制颜色代码 如#000000->黑色
+                    RGB(166,166,166)
+                background-image 和img的区别
+                    1.LOGO
+                    2.小图标
+                    img可以独立存在，而background需要依赖标签 
+                    大小依赖标签大小，如果不够大，默认会铺开来，repeat会设置是否铺开，不铺开设置为no-repeat
+                background-position 
+                    指图片从某个坐标位置开始显示 允许出现负数
+                background-size
+                    x,y 
+                    1.比例比较对象为父级元素
+                    2.数字形式
+                    3.只有一个值，水平值 垂直默认auto
+                    4.contain   宽度和父级一致，高度等比缩小放大
+                    5.cover     高度和父级一致，宽度等比缩小放大
+                background-attachment
+                    背景图片是否滚动 默认是滚动的
+                    fixed 
+                    scoll 
+                    inherit 和父级统一
+                background 整合写 每个值用空格隔开，顺序可以改变，不能把background-size: cover放进去
+            */
+        </style>
+    </head>
+
+    <body>
+
+        <h2></h2>
+    </body>
+
+</html>

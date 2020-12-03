@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+
+            }
+
+            li {
+                list-style: none;
+
+            }
+
+            .list {
+                width: 500px;
+                height: 400px;
+                border: 1px solid #000000;
+                display: flex;
+                /* flex-direction: row-reverse;
+                flex-wrap: wrap-reverse; */
+                flex-flow: row wrap;
+                /* justify-content: space-around; */
+                /* align-items: baseline; */
+                align-content: space-around;
+            }
+
+            .list li {
+                width: 120px;
+                height: 100px;
+                background: red;
+                border: 1px solid #000000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li style="font-size: 30px;">3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>6</li>
+            <li>6</li>
+            <li>6</li>
+            <li>6</li>
+            <li>6</li>
+        </ul>
+        <!--
+            设置成弹性模型 成为容器 其子元素自动成为容器成员，称为flex项目
+            容器属性
+                flex-direction:决定主轴的方向 即项目的排列方向 row|row-reverse(倒序)|columns|columns-reverse 
+                    默认水平显示(row)项目 如果容器行或列不够大 项目会自己缩减大小 默认不会换行 
+                    reverse则顺序方向相反
+
+                flex-wrap:如果一条轴线排不下是否换行 nowrap|wrap|wrap-reverse
+                    默认不换行 nowrap产生间隙目前无法消除该容器自带样式
+                    wrap-reverse:开始换行的地方在主轴正方向的另一侧
+
+                flex-flow:方向和换行的结合 <flex-direction>||<flex-wrap>
+
+                justtify-content: 属性定义了项目在主轴上的对齐方式 flex-start|flex-end|center|space-between|space-around
+                    space-around 每个项目左右自动分配剩余空间
+                    space-between 每个项目之间分别分配剩余空间
+                    换行则每一行分别应用对齐方式
+                
+                align-itms: 定义项目在交叉轴上如何对齐 flex-strart|flex-end|baseline|stretch
+                    交叉轴指主轴的垂直方向
+                    stretch 拉伸值 若为设置高度 高度为容器的高度，若设置了高度，则以设置的为准
+                    baseline 基准线 始终保持文本的下侧对其 像英文基准线一样
+                
+                alin-content 定义多跟轴线上的对其方式，如果只有一根轴线,则概述性不起作用 flex-start|flex-end|center|space-around|steetch
+                    换行则产生多个主轴 flex-start/end可解决容器自带间隙问题 
+                    对象为轴线
+
+        -->
+    </body>
+
+</html>

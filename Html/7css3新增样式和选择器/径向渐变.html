@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                width: 200px;
+                height: 100px;
+                border: 1px solid red;
+                background: radial-gradient(circle,red,yellow,blue);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+        <!-- 
+            radial-gradient(起点 形状 大小 点)
+                起点 可以是关键字(left,top,right,bottom) 具体数值或百分比
+                形状 ellipse circle
+                大小 具体数值或百分比 也可以是关键字(最近端，最近角，最远端，最远角) 
+                    包含或覆盖(左上为最近角，右上为最近边；左下为最远角，右下为最远边)
+                        closest-side 半径为从圆心到最近边
+                        closest-corner 半径为从圆心到最近角
+                        farther-side 半径为从圆心到最远边
+                        farther-corner 半径为从圆心到最远角
+                
+                火狐只支持关键字
+            默认圆心位置在中心点 渐变方向从中心往外扩散
+            设置形状时 若元素是正方形 则无效 长方形可以设置circle值
+            参考博客 https://www.cnblogs.com/xiaohuochai/p/5383285.html
+         -->
+    </body>
+
+</html>

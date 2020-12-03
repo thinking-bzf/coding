@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                /* transition-property: width;
+                transition-duration: 2s;
+                transition-delay: 1s;
+                transition-timing-function: linear; */
+                transition: 2s 1s all;
+            }
+
+            #div1:hover {
+                width: 400px;
+                height: 200px;
+                opacity: 0.5;
+                background: yellowgreen;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="div1"></div>
+        <!-- 
+            过渡
+            看到一个物体运动的过程
+
+            要看到哪个物体运动 就把过渡属性加在谁身上
+
+            transition :过渡时间 延迟时间(两个时间顺序不能变)
+            transition-property 要运动的样式 all||[attr(过渡展现出的效果)]||none
+
+            transition-duration 过渡的时间 时间越短 速度越快 时间可以为小数
+            transition-delay 过渡时间后的时间表示的是延迟时间 也就是延迟多少再开始过渡
+            transition-timing-function 运动速度样式 速度默认先快后慢(ease)
+                linear 匀速
+                ease-in (加速)
+                ease-out (减速)
+                ease-in-out (先加速后减速)
+                cubic-bezier 贝塞尔曲线(x1,y1,x2,y2)
+
+        -->
+    </body>
+
+</html>

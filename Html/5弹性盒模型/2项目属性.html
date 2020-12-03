@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+
+            }
+
+            li {
+                list-style: none;
+
+            }
+
+            .list {
+                width: 300px;
+                height: 400px;
+                border: 1px solid #000000;
+                display: flex;
+
+            }
+
+            .list li {
+                width: 40px;
+                /* flex-basis: 40px; */
+                height: 100px;
+                background: red;
+                border: 1px solid #000000;
+                /* flex-grow: 1; */
+
+            }
+
+            .list .li1 {
+                order: 1;
+                flex-shrink: 1;
+                align-self: flex-start;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul class="list">
+            <li class="li1">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+
+        </ul>
+        <!--
+            order 给项目定义显示排列顺序 数值越小排列越靠前，默认为0
+            flex-grow 定义项目的放大比例 默认为0 如果所有项目的flex-grow属性都是为1 则它们会等分剩余空间
+                再有剩余空间的情况下 设置才生效
+
+            flex-shrink 定义项目的缩小比例 默认值为1每个项目均匀缩小 即使存在剩余空间也不缩小
+                f非默认值则会比其他项目小一点(应用于每个项目中)
+            flex-basis 伸缩基点 即原始比例
+                会忽略宽度 两者取其一
+            flsx 按照剩余空间设置项目大小
+
+            align-self 允许单个项目与其他项目不一样的对齐方式 flex-start|flex-end|center|bassline|stretch
+            
+
+        -->
+
+
+    </body>
+
+</html>

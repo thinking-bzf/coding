@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+
+            }
+
+            li {
+                list-style: none;
+
+            }
+
+            .list {
+                width: 500px;
+                height: 400px;
+                border: 1px solid #000000;
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .list .li1 {
+                width: 100px;
+                background: red;
+
+            }
+
+            .list .li2 {
+                width: 50px;
+                background-color: aqua;
+                flex: 1;
+            }
+
+            .list .li3 {
+                width: 50px;
+                background-color: greenyellow;
+                flex: 3;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul class="list">
+            <li class="li1">1</li>
+            <li class="li2">2</li>
+            <li class="li3">3</li>
+        </ul>
+        <!--
+            flex是将除去未设置的flex的按比例分大小然后替换原大小 100 100 300
+            flex-grow 则是对该主轴剩余空白按比例分配 然后增加到原项目中 100 50+(300/4) 50+(300/4*3)
+            
+        -->
+</body>
+</html>

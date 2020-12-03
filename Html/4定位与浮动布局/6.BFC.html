@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .wrap {
+                width: 500px;
+                height: 500px;
+                border: 1px solid #000;
+                /* margin: 200px auto; */
+                background: red;
+            }
+
+            .left {
+                height: 200px;
+                width: 200px;
+                background: pink;
+                margin-top: 20px;
+                float: left;
+            }
+
+            /* .right {
+                height: 200px;
+                width: 200px;
+                background: blue;
+                margin-top: 10px;
+                fl  at: left;
+            } */
+
+        </style>
+    </head>
+
+    <body>
+        <!--
+        BFC
+            块级格式上下文
+        能够解决的问题
+            1.阻止margin的传递
+            2.解决margin的叠加
+            3.能够包裹浮动元素
+            
+    -->
+        <div class="wrap">
+            <div class="left">这是一个左边的div</div>
+            <!-- <div class="right">右侧div</div> -->
+        </div>
+    </body>
+
+</html>

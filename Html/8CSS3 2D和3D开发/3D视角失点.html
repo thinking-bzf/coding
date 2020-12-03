@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container {
+                width: 100px;
+                height: 100px;
+                margin: 50px auto;
+                border: none;
+                perspective: 400px;
+
+            }
+
+            .cube {
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+
+                /* perspective-origin: top left; */
+                transition: 2s 1s;
+            }
+
+            .face {
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                font-family: sans-serif;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            .front {
+                background: rgba(173, 14, 152, 0.3);
+                transition: 1s;
+            }
+
+            .back {
+                background: rgb(255, 251, 0, 1);
+                transition: 1s;
+            }
+
+            .right {
+                background: rgba(0, 255, 0, 0.7);
+                transition: 1s;
+            }
+
+            .left {
+                background: rgba(0, 0, 255, 0.7);
+                transition: 1s;
+            }
+
+            .bottom {
+                background: rgba(255, 0, 0, 0.7);
+                transition: 1s;
+            }
+
+            .top {
+                background: rgba(10, 194, 211, 0.7);
+                transition: 1s;
+            }
+
+            .cube:hover .front {
+                transform: translateZ(50px);
+            }
+
+            .cube:hover .back {
+                transform: translateZ(-50px);
+            }
+
+            .cube:hover .right {
+
+                transform: translateX(50px) rotateY(-90deg);
+            }
+
+            .cube:hover .left {
+                transform: translateX(-50px) rotateY(90deg);
+            }
+
+            .cube:hover .bottom {
+                transform: translateY(50px) rotateX(90deg);
+            }
+
+            .cube:hover .top {
+                transform: translateY(-50px) rotateX(-90deg);
+            }
+
+            .cube:hover {
+                transform: rotate3d(1, 1, 0, 75deg);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="cube per250">
+                <div class="face front">1</div>
+                <div class="face back">2</div>
+                <div class="face right">3</div>
+                <div class="face left">4</div>
+                <div class="face bottom">5</div>
+                <div class="face top">6</div>
+            </div>
+        </div>
+        <!-- 
+            perspective-origin定义观察者的视角相对于显示元素的位置 
+            通常用该属性定义视觉灭点 即视线消失的位置
+            相当于设置哪个角 哪个角看不到
+            默认元素中心位置
+                x-sxis
+                left
+                center
+                right
+                % 宽度之和的百分比 宽度+padding+margin之和的百分比 
+                y-axis
+                top
+                center
+                bottom
+                length
+
+         -->
+    </body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            html{
+                height: 100%;
+                overflow: hidden;
+            }
+            body{
+                height: 100%;
+                overflow: auto;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #div1 {
+                background-color: green;
+            }
+            #div2 {
+                background-color: greenyellow;
+            }
+            #div3 {
+                background-color: blue;
+            }
+
+        </style>
+    </head>
+
+    <body style="height: 2000px;">
+        <div id="div1">div1</div>
+        <div id="div3">div3</div>
+        <div id="div2">div2</div>
+        <!--
+            
+            z-index:[number]; 定位层级
+                没有设置z-index(0~1) 定位元素默认后者层级高于前者 后面覆盖前面 一般设置成较大的值使其一直在最上面
+                建议在兄弟标签之间比较层级
+            
+        -->
+    </body>
+
+</html>

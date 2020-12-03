@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="tt"
+  id="myeclipse.1379381891497"
+  context-root="/tt"
+  j2ee-spec="5.0"
+  archive="tt.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

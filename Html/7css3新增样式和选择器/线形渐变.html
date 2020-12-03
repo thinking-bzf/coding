@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                border: 1px solid red;
+                /* background: linear-gradient(red,yellow); */
+                background: -webkit-linear-gradient(30deg, red 30%, yellow 60%,yellow 80% ,blue)
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+        <!-- 
+            方向默认从上往下
+            注:如果不加方向值 就不需要配兼容
+            -webkit-linear-gradient(left,red,green) 表示初始点和结束点是实的 其他都是过渡的
+            30%以上都是实现的
+            如果第一个值不写方向值 也可以写角度(逆时针旋转x度) 或 left top 等
+            给颜色写范围 
+                red 30%, yellow 60%,yellow 80% ,blue
+                0-30 红色 30-60红黄渐变 60-80 黄色 80-100黄蓝渐变 100蓝色
+         -->
+    </body>
+
+</html>

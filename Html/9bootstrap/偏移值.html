@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <title>Document</title>
+        <style>
+            
+            div[class*=col] {
+                border: 1px solid #000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-12">xsadfrawdfsfhauhdwi</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">xsadfrawdfsfhauhdwi</div>
+                <div class="col-xs-6 col-xs-offset-3">xsadfrawdfsfhauhdwi</div>
+            </div>
+        </div>
+        <!-- 
+            offset 只能实现向右偏移
+                如果一行中只有一列 这一列最多可以向右偏移12单位 会忽略本身所占单位数量
+                若一行中有多列  这一列最多可以向右偏移12单位 不可忽略本身所占单元数量
+
+            push(列排序) 与offset的区别
+            push 不管一行中有几列 最多可以向右偏移12格子 忽略本身所占有的各自数量
+
+            pull 实现香左偏移
+         -->
+    </body>
+
+</html>
