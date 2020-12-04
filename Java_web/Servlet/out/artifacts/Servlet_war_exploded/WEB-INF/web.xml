@@ -3,23 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
     <servlet>
-        <servlet-name>Demo</servlet-name>
-        <servlet-class>Demo</servlet-class>
+        <servlet-name>confirm</servlet-name>
+        <servlet-class>servlet.confirm</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Demo</servlet-name>
-        <url-pattern>/Demo</url-pattern>
+        <servlet-name>confirm</servlet-name>
+        <url-pattern>/confirm</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>HelloWorld</servlet-name>
-        <servlet-class>HelloWorld</servlet-class>
+        <servlet-name>list</servlet-name>
+        <servlet-class>servlet.list</servlet-class>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>HelloWorld</servlet-name>
-        <url-pattern>/HelloWorld</url-pattern>
+        <servlet-name>list</servlet-name>
+        <url-pattern>/list</url-pattern>
     </servlet-mapping>
 </web-app>
