@@ -25,14 +25,14 @@ public class list extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.process(request, response);
-        response.setContentType("text/html;charset=UTF-8");
+//        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("<a href='/web/new.jsp'>new student</a>");
         out.flush();
         out.close();
     }
     private void process(HttpServletRequest req,HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html;charset=UTF-8");
+        resp.setContentType("text/html");
         PrintWriter out=resp.getWriter();
         try{
             req.setCharacterEncoding("UTF-8");

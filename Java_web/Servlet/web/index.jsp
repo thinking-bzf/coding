@@ -1,16 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zym
-  Date: 2020-11-27
-  Time: 14:24
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*" %>
 <html>
   <head>
-    <title>$Title$</title>
   </head>
   <body>
-  $END$
+    <div>
+      现在登陆人数
+      <%
+        String count;
+        if(session.getAttribute("count")==null)
+          count="0";
+        else{
+          count = session.getAttribute("count").toString();
+        }
+        out.println(count);
+
+      %>
+    </div>
+  <a href="login.jsp">登陆</a>
   </body>
 </html>
