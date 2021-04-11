@@ -1,0 +1,12 @@
+C:\Coding\VSTO\test\test\bin\Debug\test.dll
+C:\Coding\VSTO\test\test\bin\Debug\test.pdb
+C:\Coding\VSTO\test\test\bin\Debug\test.dll.manifest
+C:\Coding\VSTO\test\test\bin\Debug\test.vsto
+C:\Coding\VSTO\test\test\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Coding\VSTO\test\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Coding\VSTO\test\test\obj\Debug\test.Properties.Resources.resources
+C:\Coding\VSTO\test\test\obj\Debug\test.csproj.GenerateResource.cache
+C:\Coding\VSTO\test\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Coding\VSTO\test\test\obj\Debug\test.csproj.CopyComplete
+C:\Coding\VSTO\test\test\obj\Debug\test.dll
+C:\Coding\VSTO\test\test\obj\Debug\test.pdb
